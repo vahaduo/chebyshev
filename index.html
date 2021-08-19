@@ -1190,7 +1190,7 @@ https://github.com/vahaduo/
       namesCompStyle = window.getComputedStyle(namesDiv);
       namesOffset = Number((namesCompStyle.getPropertyValue("width")).replace(/px/, "")) / Number((namesCompStyle.getPropertyValue("height")).replace(/px/, "")) / 1.4142 + 2;
       document.body.removeChild(namesDiv);
-      outputMsg = '<div class="multitablewrapper"><table><tr style="height:' + namesOffset + 'em"><td data-columnid="0" class="multiheader"><div><span onclick="sortByColumn(this, false)">Target</span></div></td><td data-columnid="1" class="multiheader" colspan="2"><div><span onclick="sortByColumn(this)">Chebyshev dist.' + (addDistColMulti == 1 ? "" : " | ADC: " + addDistColMulti / 8 + "x" + (addDistColMultiRecal ? " RC" : "")) + '</span></div></td>';
+      outputMsg = '<div class="multitablewrapper"><table><tr style="height:' + namesOffset + 'em"><td data-columnid="0" class="multiheader"><div><span onclick="sortByColumn(this, false)">Target</span></div></td><td data-columnid="1" class="multiheader" colspan="2"><div><span onclick="sortByColumn(this)">Chebyshev dist.' + (addDistColMulti == 1 ? "" : "<br>ADC: " + addDistColMulti / 8 + "x" + (addDistColMultiRecal ? " RC" : "")) + '</span></div></td>';
       for (i = 0; i < sourceNumLocal; i++) {
           outputMsg += '<td data-columnid="' + (i + 2) + '" class="multisources"><div><span onclick="sortByColumn(this)">' + resultsTable[i][0] + '</span></div></td>';
       }
